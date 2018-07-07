@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Dot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="linear.css" /> -->
+  <style type="text/css">
+
+  #field {
+    position: relative;
+    height: 300px;
+    background-color: lightgreen;
+  }
+  #triangle{
+    position: absolute;
+    left: 0;
+    bottom: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 0.5em;
+  }
+  #triangle { background: red; }
+
+</style>
+  <body>
+    <div id="field"></div>
+    <div id="triangle"></div>
+  </body>
+  <script type="text/javascript">
+
+  // Original JavaScript code by Chirp Internet: www.chirp.com.au
+  // Please acknowledge use of this code by including this header.
+
+  window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+  var field = document.getElementById("field");
+  var triangle = document.getElementById("triangle");
+
+  var maxX = field.clientWidth - triangle.offsetWidth;
+  var maxY = field.clientHeight - triangle.offsetHeight;
+
+  var duration = 5; // seconds
+  var gridSize = 50; // pixels
+
+  var start = null;
+
+  function step(timestamp)
+  {
+    var progress, x, y;
+    if(start === null) start = timestamp;
+
+    progress = (timestamp - start) / duration / 1000; // percent
+
+    x = progress * maxX/gridSize; // x = ƒ(t)
+    y = 2 * Math.sin(x); // y = ƒ(x)
+
+    triangle.style.left = Math.min(maxX, gridSize * x) + "px";
+    triangle.style.bottom = maxY/2 + (gridSize * y) + "px";
+
+    if(progress >= 1) start = null; // reset to start position
+    requestAnimationFrame(step);
+  }
+
+  requestAnimationFrame(step);
+
+</script>
+</head>
+
+</html>

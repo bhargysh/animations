@@ -1,0 +1,27 @@
+@keyframes straightLine {
+  50% {
+    transform: translate3D(100px, -100px, 0);
+  }
+}
+
+.triangle {
+  /*center triangle*/
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*make triangle*/
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid white;
+  /*animation*/
+  animation: straightLine 2.5s infinite linear;
+}
+
+body {
+    background-color: black;
+}

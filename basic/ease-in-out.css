@@ -1,0 +1,36 @@
+.triangle {
+  /*center triangle*/
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*make triangle*/
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid red;
+  /*animation*/
+  animation: xAxis 2.5s infinite ease-in;
+}
+
+.triangle::after {
+  /* Render dot */
+  animation: yAxis 2.5s infinite ease-out;
+}
+
+@keyframes xAxis {
+  50% {
+    animation-timing-function: ease-in;
+    transform: translateX(100px);
+  }
+}
+
+@keyframes yAxis {
+  50% {
+    animation-timing-function: ease-out;
+    transform: translateY(-100px);
+  }
+}

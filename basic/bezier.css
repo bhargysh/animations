@@ -1,0 +1,59 @@
+.triangle {
+  /*center triangle*/
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*make triangle*/
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid red;
+  /*animate along x axis*/
+  animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  /* -webkit-animation: xAxis 2.5s infinite cubic-bezier(0.02, 0.01, 0.21, 1); */
+}
+
+.triangle::after {
+  /*render, animate along y axis */
+  animation: yAxis 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+  /* -webkit-animation: yAxis 2.5s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64); */
+}
+/*
+@-webkit-keyframes yAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+} */
+/* @-webkit-keyframes xAxis {
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+} */
+
+@keyframes yAxis {
+  50% {
+    /* -webkit-animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1); */
+    animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+    /* -webkit-transform: translateY(-100px); */
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes xAxis {
+  50% {
+    /* -webkit-animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64); */
+    animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    /* -webkit-transform: translateX(100px); */
+    transform: translateX(100px);
+  }
+}
