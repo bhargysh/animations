@@ -42,7 +42,7 @@ function draw() {
 
   ctx.drawImage(sun, 0, 0, 300, 300);
 
-  window.requestAnimationFrame(draw);
+  //window.requestAnimationFrame(draw);
 }
 
 init();
