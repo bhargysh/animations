@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Triangle</title>
+  <title>Sine</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="linear.css" />
-  <!-- <style type="text/css">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <!-- <style type="text/css"></style>
 
   #field {
     position: relative;
@@ -24,47 +24,9 @@
   #triangle { background: red; }
 
 </style> -->
-  <body>
-    <div class="triangle"></div>
-  </body>
-  <!-- <script type="text/javascript">
-
-  // Original JavaScript code by Chirp Internet: www.chirp.com.au
-  // Please acknowledge use of this code by including this header.
-
-  window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-
-  var field = document.getElementById("field");
-  var triangle = document.getElementById("triangle");
-
-  var maxX = field.clientWidth - triangle.offsetWidth;
-  var maxY = field.clientHeight - triangle.offsetHeight;
-
-  var duration = 5; // seconds
-  var gridSize = 50; // pixels
-
-  var start = null;
-
-  function step(timestamp)
-  {
-    var progress, x, y;
-    if(start === null) start = timestamp;
-
-    progress = (timestamp - start) / duration / 1000; // percent
-
-    x = progress * maxX/gridSize; // x = ƒ(t)
-    y = 2 * Math.sin(x); // y = ƒ(x)
-
-    triangle.style.left = Math.min(maxX, gridSize * x) + "px";
-    triangle.style.bottom = maxY/2 + (gridSize * y) + "px";
-
-    if(progress >= 1) start = null; // reset to start position
-    requestAnimationFrame(step);
-  }
-
-  requestAnimationFrame(step);
-
-</script> -->
 </head>
-
+  <body>
+    <canvas class="wave" id="wave" width="500px" height="500px"></canvas>
+  </body>
+  <script src="sine-wave.js"></script>
 </html>
