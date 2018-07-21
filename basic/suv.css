@@ -1,11 +1,15 @@
 .body {
-  width: 100px;
+  width: 200px;
   margin: 0 auto;
+}
+.window-frame {
+  width: 250px;
+  height: 80px;
+  background: #fdc02f;
 }
 .container {
   display: inline-flex;
   flex-direction: row;
-  justify-content: space-evenly;
 }
 .window-left {
   width: 60px;
@@ -19,13 +23,13 @@
   background: #38474e;
   margin-left: 15px;
 }
-.window-right-1 {
+.window-right.rectangle {
   width: 50px;
   height: 60px;
   background: #38474e;
   margin-left: 15px;
 }
-.window-right-2 {
+.window-right.triangle {
   width: 0;
   height: 0;
   border-style: solid;
@@ -33,20 +37,16 @@
   border-color: transparent transparent transparent #38474e;
 }
 .wheel {
-/*   $charcoal: #556e79;
-  $bluegrey: #90a4ad; */
   width: 40px;
   height: 40px;
   background: #90a4ad;
   border-radius: 50%;
   box-shadow: 1px 1px 0px 15px #556e79;
   margin-top: 100px;
+  margin-left: 200px;
 }
-.wheel.front {
-  margin-left: 250px;
-}
-.wheel.back{
-  float: left;
+.wheel.back {
+  margin-left: 0px;
 }
 /* @keyframes spin {
     0% { transform: rotate(0); }
