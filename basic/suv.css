@@ -33,6 +33,14 @@
   border-radius: 0px 50px 30px 20px;
   position: absolute;
   margin: auto;
+  z-index: -1;
+}
+.car-body-bottom {
+  width: 330px;
+  height: 35px;
+  background: #38474e;
+  margin-top: 65px;
+  border-radius: 0px 0px 20px 20px;
 }
 .car-body:before {
   content: '';
@@ -54,6 +62,7 @@
   border-radius: 0px 90px 0px 50px;
   background: #1eb2fc;
 }
+
 .window-left {
   width: 60px;
   height: 60px;
@@ -90,12 +99,12 @@
   background: #90a4ad;
   border-radius: 50%;
   box-shadow: 1px 1px 0px 15px #556e79;
-  margin-top: 70px;
+  margin-top: -25px;
   margin-left: 250px;
   position: absolute;
 }
 .wheel.back {
-  margin-left: 0px;
+  margin-left: 50px;
 }
 /* @keyframes spin {
     0% { transform: rotate(0); }
