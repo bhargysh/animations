@@ -1,17 +1,15 @@
 @keyframes sunrise {
-  0% {
-    background-color: #001F3F;
-  }
-  100% {
-    background-color: lightblue;
-  }
+  0% { background-color: #001F3F; }
+  100% { background-color: lightblue; }
 }
 body {
+  background: black;
   animation: sunrise 4s infinite;
 }
 .body {
   width: 200px;
   margin: 0 auto;
+  position: relative;
 }
 .container {
   display: inline-flex;
@@ -196,15 +194,16 @@ span {
   z-index: -1;
 }
 @keyframes sunUp {
-  0% { transform: translateY(0px); }
-  75% { transform: translateY(-200px); }
-  100% { transform: translateY(-200px); }
+  0% { transform: translate(-100px, 0px); }
+  50% { transform: translate(150px, -200px); }
+  100% { transform: translate(150px, -200px); }
 }
 .sun-container {
   display: flex;
-  flex-direction: column;
-  margin-left: 30px;
-  animation: sunUp 4s infinite linear;
+  flex-direction: row;
+  animation: sunUp 4s infinite ease-in-out;
+  position: absolute;
+  z-index: -5;
 }
 .sun-rays {
   width: 70px;
