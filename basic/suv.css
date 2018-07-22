@@ -128,7 +128,7 @@ span {
   background-color: #38474e;
   vertical-align: bottom;
   margin-right: 20px;
-  animation: roadLine 2s infinite linear;
+  animation: roadLine 2.5s infinite linear;
 }
 .line1{
   width: 80px;
@@ -181,6 +181,6 @@ span {
   100% { transform: translate(-500px); }
 }
 .container.tree-wrap {
-  animation: moveTree 2s infinite linear;
+  animation: moveTree 2.5s infinite linear;
   z-index: -5;
 }
