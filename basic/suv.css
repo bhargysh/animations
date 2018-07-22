@@ -106,7 +106,7 @@
 .wheel.back {
   margin-left: 50px;
 }
-/* @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0); }
     100% { transform: rotate(360deg); }
 }
@@ -116,8 +116,8 @@
 }
 @keyframes roadLine {
   0% { transform: translate(200px); }
-  100% { transform: translate(-200px); }
-} */
+  100% { transform: translate(-150px); }
+}
 .container.centre-middle {
   margin-left: 200px;
   margin-top: 17px;
@@ -146,7 +146,7 @@ span {
   border-radius: 50px 50px 40px 40px;
   position: absolute;
   bottom: 50px;
-  right: 550px;
+  right: 0px;
 }
 .tree-layer-2 {
   width: 90px;
@@ -155,7 +155,7 @@ span {
   border-radius: 50px 50px 40px 40px;
   position: absolute;
   bottom: 95px;
-  right: 565px;
+  right: 15px;
 }
 .tree-layer-3 {
   width: 60px;
@@ -164,7 +164,7 @@ span {
   border-radius: 50px 50px 40px 40px;
   position: absolute;
   bottom: 135px;
-  right: 580px;
+  right: 30px;
 }
 .tree-trunk {
   width: 20px;
@@ -173,6 +173,14 @@ span {
   border-radius: 50px 50px 40px 40px;
   position: absolute;
   bottom: 0px;
-  right: 600px;
+  right: 50px;
   z-index: -1;
+}
+@keyframes moveTree {
+  0% { transform: translate(0px); }
+  100% { transform: translate(-500px); }
+}
+.container.tree-wrap {
+  animation: moveTree 2s infinite linear;
+  z-index: -5;
 }
