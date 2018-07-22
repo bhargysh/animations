@@ -37,9 +37,9 @@
 }
 .car-body-bottom {
   width: 330px;
-  height: 35px;
+  height: 40px;
   background: #38474e;
-  margin-top: 65px;
+  margin-top: 60px;
   border-radius: 0px 0px 20px 20px;
 }
 .car-body:before {
@@ -106,11 +106,37 @@
 .wheel.back {
   margin-left: 50px;
 }
-/* @keyframes spin {
+@keyframes spin {
     0% { transform: rotate(0); }
     100% { transform: rotate(360deg); }
 }
 .wheel {
-    -webkit-animation: spin 0.4s infinite linear;
-    animation: spin 0.4s infinite linear;
-} */
+    -webkit-animation: spin 0.5s infinite linear;
+    animation: spin 0.5s infinite linear;
+}
+
+@keyframes roadLine {
+  0% { transform: translate(80px); }
+  100% { transform: translate(0px); }
+}
+.container.centre-middle {
+  margin-left: 200px;
+  margin-top: 17px;
+}
+span {
+  width: 100%;
+  height: 6px;
+  background-color: #38474e;
+  vertical-align: bottom;
+  margin-right: 20px;
+  animation: roadLine 1s infinite linear;
+}
+.line1{
+  width: 80px;
+}
+.line2{
+  width: 580px;
+}
+.line3{
+  width: 80px;
+}
