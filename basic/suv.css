@@ -114,10 +114,9 @@
     -webkit-animation: spin 0.5s infinite linear;
     animation: spin 0.5s infinite linear;
 }
-
 @keyframes roadLine {
-  0% { transform: translate(80px); }
-  100% { transform: translate(0px); }
+  0% { transform: translate(200px); }
+  100% { transform: translate(-200px); }
 }
 .container.centre-middle {
   margin-left: 200px;
@@ -129,7 +128,7 @@ span {
   background-color: #38474e;
   vertical-align: bottom;
   margin-right: 20px;
-  animation: roadLine 1s infinite linear;
+  animation: roadLine 2s infinite linear;
 }
 .line1{
   width: 80px;
