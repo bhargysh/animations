@@ -106,7 +106,7 @@
 .wheel.back {
   margin-left: 50px;
 }
-@keyframes spin {
+/* @keyframes spin {
     0% { transform: rotate(0); }
     100% { transform: rotate(360deg); }
 }
@@ -117,7 +117,7 @@
 @keyframes roadLine {
   0% { transform: translate(200px); }
   100% { transform: translate(-200px); }
-}
+} */
 .container.centre-middle {
   margin-left: 200px;
   margin-top: 17px;
@@ -138,4 +138,41 @@ span {
 }
 .line3{
   width: 80px;
+}
+.tree-layer-1 {
+  width: 120px;
+  height: 60px;
+  background: #8cc252;
+  border-radius: 50px 50px 40px 40px;
+  position: absolute;
+  bottom: 50px;
+  right: 550px;
+}
+.tree-layer-2 {
+  width: 90px;
+  height: 55px;
+  background: #8cc252;
+  border-radius: 50px 50px 40px 40px;
+  position: absolute;
+  bottom: 95px;
+  right: 565px;
+}
+.tree-layer-3 {
+  width: 60px;
+  height: 45px;
+  background: #8cc252;
+  border-radius: 50px 50px 40px 40px;
+  position: absolute;
+  bottom: 135px;
+  right: 580px;
+}
+.tree-trunk {
+  width: 20px;
+  height: 60px;
+  background: #785549;
+  border-radius: 50px 50px 40px 40px;
+  position: absolute;
+  bottom: 0px;
+  right: 600px;
+  z-index: -1;
 }
