@@ -19,12 +19,40 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 80px 0 0 40px;
+  border-width: 80px 0 0 45px;
   border-color: transparent transparent transparent #fdc02f;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 15px;
   margin-left: 220px;
   position: absolute;
   z-index: -1;
+}
+.car-body {
+  width: 330px;
+  height: 100px;
+  background: #fdc02f;
+  border-radius: 0px 50px 30px 20px;
+  position: absolute;
+  margin: auto;
+}
+.car-body:before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -25px;
+  width: 25px;
+  height: 70px;
+  border-radius: 8px 3px 1px 8px;
+  background: #465a63;
+}
+.car-body:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 310px;
+  width: 20px;
+  height: 35px;
+  border-radius: 0px 90px 0px 50px;
+  background: #1eb2fc;
 }
 .window-left {
   width: 60px;
@@ -57,13 +85,14 @@
   margin-top: 10px;
 }
 .wheel {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background: #90a4ad;
   border-radius: 50%;
   box-shadow: 1px 1px 0px 15px #556e79;
-  margin-top: 100px;
-  margin-left: 200px;
+  margin-top: 70px;
+  margin-left: 250px;
+  position: absolute;
 }
 .wheel.back {
   margin-left: 0px;
