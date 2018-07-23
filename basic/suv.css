@@ -3,13 +3,23 @@
   100% { background-color: lightblue; }
 }
 body {
-  background: black;
-  animation: sunrise 4s infinite;
+  background: lightblue;
+  animation: sunrise 5s;
+}
+@keyframes rotateCar {
+  0% { transform: rotate(0) translateY(0px); }
+  50% { transform: rotate(90deg) translate(200px); }
+  100% { transform: rotate(90deg) translate(600px); }
+/*   100% { from {position: absolute; bottom: 450px;}
+    to {position: absolute; bottom: 0px;} } */
 }
 .body {
   width: 200px;
   margin: 0 auto;
   position: relative;
+  animation: rotateCar 4s linear 4s;
+  animation-fill-mode: forwards;
+  z-index: 1;
 }
 .container {
   display: inline-flex;
@@ -131,29 +141,36 @@ body {
   0% { transform: translate(200px); }
   100% { transform: translate(-150px); }
 }
+/* @keyframes roadColour {
+  0% { background-color: #38474e; }
+  99% { background-color: #38474e; }
+  100% { background-color: lightblue; }
+} */
 span {
   width: 100%;
   height: 6px;
   background-color: #38474e;
   vertical-align: bottom;
-  margin-right: 20px;
-  animation: roadLine 4s infinite linear;
+  margin-right: 10px;
+  animation: roadLine 4s linear;
+  animation-fill-mode: forwards;
 }
 .line1{
-  width: 80px;
+  width: 70px;
 }
 .line2{
-  width: 580px;
+  width: 520px;
 }
 .line3{
-  width: 80px;
+  width: 70px;
 }
 @keyframes moveTree {
   0% { transform: translate(0px); }
   100% { transform: translate(-500px); }
 }
 .container.tree-wrap {
-  animation: moveTree 4s infinite linear;
+  animation: moveTree 3s linear;
+  animation-fill-mode: forwards;
   z-index: -5;
 }
 .tree-layer-1 {
@@ -201,7 +218,8 @@ span {
 .sun-container {
   display: flex;
   flex-direction: row;
-  animation: sunUp 4s infinite ease-in-out;
+  animation: sunUp 5s ease-in-out;
+  animation-fill-mode: forwards;
   position: absolute;
   z-index: -5;
 }
