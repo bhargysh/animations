@@ -21,15 +21,15 @@
   height: 25px;
   background: #C51D56;
   border-radius: 50%;
-  margin-top: 40px;
-  box-shadow: 0px 0px 0px 5px white;
+  margin-top: 50px;
+  box-shadow: 0px 0px 0px 7px white;
 }
 .eye-glare {
   width: 7px;
   height: 7px;
   background: white;
   border-radius: 50%;
-  margin-top: 45px;
+  margin-top: 55px;
   margin-left: -10px;
 }
 .eye-glare-small {
@@ -37,15 +37,51 @@
   height: 4px;
   background: white;
   border-radius: 50%;
-  margin-top: 53px;
+  margin-top: 65px;
   margin-left: -5px;
 }
 .head {
-  width: 150px;
-  height: 100px;
+  width: 100px;
+  height: 200px;
   background: #1B2D6E;
   border-radius: 50% 50% 10% 10%;
   margin-top: 20px;
-  margin-left: -80px;
+  margin-left: -60px;
   z-index: -1;
+}
+.mouth {
+  width: 40px;
+  height: 40px;
+  background:#F0932F;
+  border-radius: 80% 10% 10% 20%;
+  margin-left: -85px;
+  margin-top: 100px;
+}
+.mouth:after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background:#F0932F;
+  border-radius: 80% 10% 10% 20%;
+  transform: rotate(90deg) translate(0px, -30px);
+}
+.tooth-right {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  transform: rotate(35deg);
+  margin-top: 105px;
+}
+.tooth-left {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid white;
+  transform: rotate(-35deg);
+  margin-top: 105px;
+  margin-left: -50px;
 }
