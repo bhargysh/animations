@@ -114,21 +114,59 @@
 .arm {
   background-color: #1B2D6E;
   position: absolute;
-  height: 110px;
-  width: 35px;
+  height: 100px;
+  width: 30px;
   border-radius: 35%;
   top: 90px;
-  z-index: 15;
+  z-index: -1;
 }
 .arm.left {
-  left: 43%;
-  top: 15%;
+  left: 43.5%;
+  top: 20%;
   transform: rotate(130deg);
   /*-webkit-transform-origin: center top;*/
 }
 .arm.right {
   left: 56%;
-  top: 15%;
+  top: 20%;
   transform: rotate(-130deg);
   /*-webkit-transform-origin: center top;*/
+}
+.finger {
+  width: 10px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50% 50% 0 0;
+  background: #1B2D6E;
+  top: 50px;
+}
+.finger.right-one {
+  transform: rotate(20deg);
+  top: 17%;
+  left: 59.5%;
+}
+.finger.right-two {
+  transform: rotate(40deg);
+  top: 19%;
+  left: 60.5%;
+}
+.finger.right-three {
+  transform: rotate(65deg);
+  top: 22%;
+  left: 60.5%;
+}
+.finger.left-one {
+  transform: rotate(-20deg);
+  top: 17%;
+  right: 57.5%;
+}
+.finger.left-two {
+  transform: rotate(-40deg);
+  top: 18.5%;
+  right: 58.5%;
+}
+.finger.left-three {
+  transform: rotate(-65deg);
+  top: 23%;
+  right: 58.5%;
 }
