@@ -1,5 +1,6 @@
 $c1: orange;
 $c2: #FFEB3B;
+
 .wrapper {
   display:flex;
   flex-direction : column;
@@ -19,10 +20,15 @@ $c2: #FFEB3B;
   z-index: 1;
   background: $c1;
 }
+@keyframes lick-right {
+  from { transform: translate(45px, -35px);     }
+  to   { transform: translate(45px, -40px); }
+}
 .one {
   position: absolute;
   transform: translate(45px, -35px);
   background: $c1;
+  animation: lick-right 1.5s ease infinite;
 }
 .two {
   position: absolute;
@@ -35,10 +41,15 @@ $c2: #FFEB3B;
   transform: translate(80px, -15px);
   background: white;
 }
+@keyframes lick-middle {
+  from { transform: translate(-45px, -50px);     }
+  to   { transform: translate(-45px, -35px); }
+}
 .four {
   position: absolute;
   transform: translate(-45px, -50px);
   background: $c1;
+  animation: lick-middle 2s ease infinite;
 }
 .five {
   position: absolute;
@@ -50,10 +61,15 @@ $c2: #FFEB3B;
   transform: translate(-50px, 0px);
   background: white;
 }
+@keyframes lick-left {
+  from { transform: translate(-60px, -10px);     }
+  to   { transform: translate(-60px, -15px); }
+}
 .seven {
   position: absolute;
   transform: translate(-60px, -10px);
   background: $c1;
+  animation: lick-left 1s ease infinite;
 }
 .eight {
   position: absolute;
