@@ -1,19 +1,22 @@
 $c1: #FFA03C;
 $c2: #FFEB3B;
+$c3: #F3DC80;
 
 .head-container {
   display: flex;
   flex-direction : column;
-  // align-items : center;
-  // justify-content: center;
-  top: 50%;
-  left: 50%
+  align-items : center;
+  justify-content: center;
+  margin-top: 100px;
+  // height: 100vh;
 }
 .head {
   position: absolute;
   width: 100px;
   height: 120px;
   border-radius: 50% 50% 30% 30%;
+  // border: solid 0.03em;
+  // border-color: red;
   background: $c1;
 }
 .eye {
@@ -24,10 +27,10 @@ $c2: #FFEB3B;
   background: white;
 }
 .eye.left {
-  transform: translate(10px, 20px);
+  transform: translate(-20px, -10px);
 }
 .eye.right {
-  transform: translate(55px, 20px);
+  transform: translate(25px, -10px);
 }
 .iris {
   position: absolute;
@@ -37,10 +40,10 @@ $c2: #FFEB3B;
   background: #0F507B;
 }
 .iris.left {
-  transform: translate(15px, 20px);
+  transform: translate(-15px, -10px);
 }
 .iris.right {
-  transform: translate(55px, 20px);
+  transform: translate(30px, -10px);
 }
 .pupil {
   position: absolute;
@@ -50,17 +53,17 @@ $c2: #FFEB3B;
   background: #09294A;
 }
 .pupil.left {
-  transform: translate(25px, 35px);
+  transform: translate(-10px, -15px);
 }
 .pupil.right {
-  transform: translate(65px, 35px);
+  transform: translate(35px, -15px);
 }
 .mouth {
   position: absolute;
   width: 60px;
   height: 25px;
   border-radius: 50% 50% 10% 10%;
-  transform: rotate(180deg) translate(-20px, -85px);
+  transform: rotate(180deg) translate(0px, -40px);
   background: #FA5C35;
 }
 .tooth {
@@ -72,10 +75,10 @@ $c2: #FFEB3B;
   border-top: 10px solid white;
 }
 .tooth.left {
-  transform: translate(25px, 85px);
+  transform: translate(-20px, 32px);
 }
 .tooth.right{
-  transform: translate(65px, 85px);
+  transform: translate(20px, 32px);
 }
 .shine {
   position: absolute;
@@ -85,17 +88,64 @@ $c2: #FFEB3B;
   background: white;
 }
 .shine.left {
-  transform: translate(35px, 40px);
+  transform: translate(-5px, -20px);
 }
 .shine.right {
-  transform: translate(75px, 40px);
+  transform: translate(40px, -20px);
 }
+.outer {
+  position: absolute;
+  width: 120px;
+  height: 160px;
+  border-radius: 90% 90% 50% 50%;
+  background: $c1;
+  transform: translate(0px, 120px);
+  z-index: -1;
+}
+.inner {
+  position: absolute;
+  width: 80px;
+  height: 140px;
+  border-radius: 90% 90% 50% 50%;
+  background: $c3;
+  transform: translate(0px, 130px);
+}
+.arm {
+  position: absolute;
+  width: 35px;
+  height: 100px;
+  background: $c1;
+}
+.arm.left {
+  transform: rotate(345deg) translate(-75px, 40px);
+  border-radius: 50% 50% 0% 20%;
+  z-index: -1;
+}
+.finger {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 14px solid $c1;
+}
+.finger.left_left {
+  transform: translate(-85px, 15px) rotate(120deg);
+}
+.finger.left_middle {
+  transform: translate(-75px, 5px) rotate(170deg);
+}
+.finger.left_right {
+  transform: translate(-60px, 10px) rotate(220deg);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  transform: translate(250px, 200px);
+  // height: 100vh;
 }
 .circle {
   position: absolute;
