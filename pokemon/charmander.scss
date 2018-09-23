@@ -1,6 +1,7 @@
 $c1: #FFA03C;
 $c2: #FFEB3B;
 $c3: #F3DC80;
+$c4: #FA5C35;
 
 .head-container {
   display: flex;
@@ -64,7 +65,7 @@ $c3: #F3DC80;
   height: 25px;
   border-radius: 50% 50% 10% 10%;
   transform: rotate(180deg) translate(0px, -40px);
-  background: #FA5C35;
+  background: $c4;
 }
 .tooth {
   position: absolute;
@@ -175,15 +176,62 @@ $c3: #F3DC80;
 .foot.right {
   transform: translate(42px, 230px);
 }
-.toe {
-
+.tail-circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
-.wrapper {
+.tail-circle.uno {
+  position: absolute;
+  transform: translate(-60px, 110px);
+  background: $c1;
+  z-index: -2;
+}
+.tail-circle.dos {
+  position: absolute;
+  transform: translate(-50px, 80px);
+  background: white;
+  z-index: -2;
+}
+// .werk {
+//   display: flex;
+//   flex-direction : column;
+//   align-items : center;
+//   justify-content: center;
+//   // animation: wiggle 1s infinite;
+// }
+.flame {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 0 50% 50% 50%;
+  background: $c2;
+  z-index: 2;
+}
+@keyframes wiggle {
+  0% { transform: rotate(-45deg); }
+  50% { transform: rotate(-35deg); }
+  100% { transform: rotate(-40deg); }
+}
+.flame.outer {
+  transform: translate(-130px, 70px) rotate(45deg);
+  // animation: wiggle 0.1s infinite;
+}
+.flame.inner {
+  height: 20px;
+  width: 20px;
+  transform: translate(-130px, 70px) rotate(45deg);
+  background: #DC0000;
+  z-index: 3;
+  // animation: wiggle 0.1s infinite;
+}
+.campfire {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translate(250px, 200px);
+  transform: translate(200px, 150px);
   // height: 100vh;
 }
 .circle {
@@ -267,4 +315,16 @@ $c3: #F3DC80;
   border-radius: 0 50% 50% 50%;
   background: $c2;
   z-index: 2;
+}
+.log {
+  width: 100px;
+  height: 20px;
+  background: #734021;
+  border-radius: 30%;
+}
+.log.left {
+  transform: translate(0px, 60px) rotate(10deg);
+}
+.log.right {
+  transform: translate(0px, 40px) rotate(350deg);
 }
