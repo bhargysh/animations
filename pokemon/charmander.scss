@@ -115,11 +115,13 @@ $c3: #F3DC80;
   width: 35px;
   height: 100px;
   background: $c1;
+  border-radius: 50% 50% 20% 20%;
 }
 .arm.left {
   transform: rotate(345deg) translate(-75px, 40px);
-  border-radius: 50% 50% 0% 20%;
-  z-index: -1;
+}
+.arm.right {
+  transform: rotate(15deg) translate(75px, 40px);
 }
 .finger {
   position: absolute;
@@ -136,9 +138,46 @@ $c3: #F3DC80;
   transform: translate(-75px, 5px) rotate(170deg);
 }
 .finger.left_right {
-  transform: translate(-60px, 10px) rotate(220deg);
+  transform: translate(-62px, 10px) rotate(220deg);
 }
+.finger.right_left {
+  transform: translate(60px, 11px) rotate(140deg);
+}
+.finger.right_middle {
+  transform: translate(75px, 5px) rotate(190deg);
+}
+.finger.right_right {
+  transform: translate(85px, 15px) rotate(240deg);
+}
+.leg {
+  position: absolute;
+  width: 40px;
+  height: 70px;
+  background: $c1;
+  border-radius: 50%;
+}
+.leg.left {
+  transform: translate(-40px, 200px) rotate(340deg);
+}
+.leg.right {
+  transform: translate(40px, 200px) rotate(20deg);
+}
+.foot {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: $c1;
+  border-radius: 50%;
+}
+.foot.left {
+  transform: translate(-42px, 230px);
+}
+.foot.right {
+  transform: translate(42px, 230px);
+}
+.toe {
 
+}
 .wrapper {
   display: flex;
   flex-direction: column;
