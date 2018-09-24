@@ -2,22 +2,22 @@ $c1: #FFA03C;
 $c2: #FFEB3B;
 $c3: #F3DC80;
 $c4: #FA5C35;
-
+$c5: #E1F8FE;
+body {
+  background: $c5;
+}
 .head-container {
   display: flex;
   flex-direction : column;
   align-items : center;
   justify-content: center;
   margin-top: 100px;
-  // height: 100vh;
 }
 .head {
   position: absolute;
   width: 100px;
   height: 120px;
   border-radius: 50% 50% 30% 30%;
-  // border: solid 0.03em;
-  // border-color: red;
   background: $c1;
 }
 .eye {
@@ -191,16 +191,9 @@ $c4: #FA5C35;
 .tail-circle.dos {
   position: absolute;
   transform: translate(-50px, 80px);
-  background: white;
+  background: $c5;
   z-index: -2;
 }
-// .werk {
-//   display: flex;
-//   flex-direction : column;
-//   align-items : center;
-//   justify-content: center;
-//   // animation: wiggle 1s infinite;
-// }
 .flame {
   position: absolute;
   height: 40px;
@@ -208,31 +201,29 @@ $c4: #FA5C35;
   border-radius: 0 50% 50% 50%;
   background: $c2;
   z-index: 2;
+  transform: translate(-130px, 70px)  rotate(45deg);
 }
 @keyframes wiggle {
-  0% { transform: rotate(-45deg); }
-  50% { transform: rotate(-35deg); }
-  100% { transform: rotate(-40deg); }
+  0% { transform: translate(-130px, 70px) rotate(45deg); }
+  50% { transform: translate(-130px, 70px) rotate(35deg); }
+  100% { transform: translate(-130px, 70px) rotate(40deg); }
 }
 .flame.outer {
-  transform: translate(-130px, 70px) rotate(45deg);
-  // animation: wiggle 0.1s infinite;
+  animation: wiggle 0.2s infinite;
 }
 .flame.inner {
   height: 20px;
   width: 20px;
-  transform: translate(-130px, 70px) rotate(45deg);
   background: #DC0000;
   z-index: 3;
-  // animation: wiggle 0.1s infinite;
+  animation: wiggle 0.2s infinite;
 }
 .campfire {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform: translate(200px, 150px);
-  // height: 100vh;
+  transform: translate(300px, 150px);
 }
 .circle {
   position: absolute;
@@ -260,12 +251,12 @@ $c4: #FA5C35;
   position: absolute;
   transform: translate(70px, -70px);
   z-index: 1;
-  background: white;
+  background: $c5;
 }
 .three {
   position: absolute;
   transform: translate(80px, -15px);
-  background: white;
+  background: $c5;
 }
 @keyframes lick-middle {
   from { transform: translate(-45px, -50px);     }
@@ -280,12 +271,12 @@ $c4: #FA5C35;
 .five {
   position: absolute;
   transform: translate(-69px, -70px);
-  background: white;
+  background: $c5;
 }
 .six {
   position: absolute;
   transform: translate(-50px, 0px);
-  background: white;
+  background: $c5;
 }
 @keyframes lick-left {
   from { transform: translate(-60px, -10px);     }
@@ -300,12 +291,15 @@ $c4: #FA5C35;
 .eight {
   position: absolute;
   transform: translate(-90px, -30px);
-  background: white;
+  background: $c5;
 }
 .nine {
   position: absolute;
+  width: 100px;
+  height: 80px;
+  border-radius: 50%;
   transform: translate(-50px, 25px);
-  background: white;
+  background: $c5;
 }
 .cone {
   position: absolute;
@@ -327,4 +321,45 @@ $c4: #FA5C35;
 }
 .log.right {
   transform: translate(0px, 40px) rotate(350deg);
+}
+.grass {
+  width: 100%;
+  height: 500px;
+  margin-top: 200px;
+  background: #40A227;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+$size: 20px;
+.pokeball {
+  position: absolute;
+  width: $size * 2;
+  height: $size;
+  border: 0.1em solid black;
+}
+.pokeball.red {
+  background: #DC0000;
+  border-top-left-radius: $size * 2;
+  border-top-right-radius: $size * 2;
+  transform: translate(110px, 210px);
+}
+.pokeball.white {
+  background: white;
+  border-bottom-left-radius: $size * 2;
+  border-bottom-right-radius: $size * 2;
+  transform: translate(110px, 230px);
+}
+.poke_circle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  transform: translate(110px, 220px);
+  border: 0.1em solid black;
+  z-index: 1;
 }
